@@ -1,0 +1,40 @@
+schema: umicom.application.v1
+
+application:
+  id: org.umicom.mobile-studio
+  name: Umicom Mobile Studio
+  short_name: Mobile Studio
+  version: 0.1.0
+  executable: umicom-mobile-studio-console
+  aliases: [mobile-studio]
+
+framework:
+  minimum_version: 0.9.0
+  compatible_major: 0
+
+frontends:
+  - console
+
+entry:
+  kind: workbench
+  taskbar_group: development
+  pinned_by_default: false
+  default_layout: design
+
+capabilities:
+  - umicom.frontend
+  - umicom.designer
+  - umicom.editor
+  - umicom.delivery
+  - umicom.application.experience
+  - umicom.application.federation
+
+source_layout:
+  product_root: src
+  composition_root: src
+  console_frontend: src/console
+
+boundaries:
+  owns_reusable_framework_logic: false
+  owns_persistence: false
+  consumes_framework_services: true
