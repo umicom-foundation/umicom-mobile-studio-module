@@ -72,6 +72,12 @@ target_link_libraries(umicom_mobile_studio_module PUBLIC
 umicom_apply_warnings(umicom_mobile_studio_module)
 umicom_apply_sanitizers(umicom_mobile_studio_module)
 
+include(
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../framework/cmake/UmicomThinApplicationRuntime.cmake")
+umicom_extend_thin_application_runtime(
+    NAME "mobile-studio"
+    TARGET "umicom_mobile_studio_module")
+
 if(UMICOM_MOBILE_STUDIO_BUILD_CONSOLE)
     add_executable(umicom-mobile-studio-console
         src/console/main.c)
