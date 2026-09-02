@@ -24,13 +24,29 @@
 extern "C" {
 #endif
 
+/**
+ * Return the number of records represented by mobile studio workspace layout without
+ * changing their state.
+ */
 size_t umi_mobile_studio_workspace_layout_count(void);
 
+/**
+ * Find mobile studio workspace layout while leaving the underlying catalogue or model
+ * owned by this module.
+ */
 const UmiExperienceLayoutDefinition *umi_mobile_studio_workspace_layout_at(
     size_t index);
 
+/**
+ * Provide the mobile studio workspace default operation used by this module and its client
+ * applications.
+ */
 const UmiExperienceLayoutDefinition *umi_mobile_studio_workspace_default(void);
 
+/**
+ * Provide the mobile studio workspace next feature operation used by this module and its
+ * client applications.
+ */
 const UmiExperienceFeatureDefinition *umi_mobile_studio_workspace_next_feature(
     void);
 

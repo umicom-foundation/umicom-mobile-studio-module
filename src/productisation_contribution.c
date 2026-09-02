@@ -28,12 +28,20 @@ static const UmiProductApplicationAdoption ADOPTION = {
     1
 };
 
+/*
+ * Provide the mobile studio productisation contribution operation used by this module and
+ * its client applications.
+ */
 const UmiProductApplicationAdoption *
 umi_mobile_studio_productisation_contribution(void)
 {
     return &ADOPTION;
 }
 
+/*
+ * Provide the mobile studio productisation snapshot operation used by this module and its
+ * client applications.
+ */
 UmiStatus umi_mobile_studio_productisation_snapshot(
     UmiProductApplicationAdoptionSnapshot *out_snapshot)
 {

@@ -25,11 +25,23 @@ extern "C" {
 
 #define UMI_MOBILE_STUDIO_MODULE_API_VERSION 1U
 
+/**
+ * Provide the mobile studio application id operation used by this module and its client
+ * applications.
+ */
 const char *umi_mobile_studio_application_id(void);
 
+/**
+ * Provide the mobile studio application experience operation used by this module and its
+ * client applications.
+ */
 const UmiApplicationExperienceDefinition *
 umi_mobile_studio_application_experience(void);
 
+/**
+ * Provide the mobile studio application status operation used by this module and its
+ * client applications.
+ */
 UmiStatus umi_mobile_studio_application_status(
     UmiApplicationExperienceStatus *out_status);
 
